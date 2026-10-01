@@ -87,13 +87,64 @@ section h3 {
 }
 
 .participants-section ul {
-  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 0;
+  list-style: none;
   color: #4b5563;
 }
 
 .participants-section li {
-  padding: 2px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 3px 4px;
+  border-radius: 3px;
   overflow-wrap: anywhere;
+}
+
+.participants-section li span {
+  min-width: 0;
+}
+
+.remove-participant {
+  display: grid;
+  flex: 0 0 32px;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  padding: 6px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: transparent;
+  color: #a52828;
+}
+
+.remove-participant:hover:not(:disabled) {
+  background: #ffebee;
+  color: #8e1b1b;
+}
+
+.remove-participant:focus-visible {
+  outline: 2px solid #1a237e;
+  outline-offset: 2px;
+}
+
+.remove-participant:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.remove-participant svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
 }
 
 .form-group {
